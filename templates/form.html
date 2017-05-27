@@ -6,7 +6,7 @@
   <body>
     <div id="container">
       <div class="pagetitle">
-        <h1>Welcome!</h1>
+        <h1>Welcome to Elliot's Risk Calculator!</h1>
       </div>
       <div id="main">
         <form method="post" action="{{ url_for('submitted_form') }}">
@@ -16,11 +16,17 @@
  		<option value="apple">apple</option>
   		<option value="ibm">ibm</option>
   		<option value="oracle">oracle</option>
-	  </select>
+		<option value="google">google</option>
+	  </select><br/><br />
           <label for="investment">Investment:</label>
           <input type="text" name="investment" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 	  </input>
-		<br />
+	  <br /><br />
+          <label for="runat">Run Against:</label>
+          <select name="runat">
+		<option value="lambda">Lambda</option>
+	        <option value="ec2">EC2</option>
+          </select><br /><br />
           <input type="submit">
         </form>
       </div>

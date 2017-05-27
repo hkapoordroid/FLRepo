@@ -1,6 +1,5 @@
 # [START app]
 import logging
-import requests
 import urllib2
 
 # [START imports]
@@ -24,8 +23,13 @@ def form():
 def submitted_form():
     company = request.form['company']
     investment = request.form['investment']
+    runat = request.form['runat']
 
-    r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment))
+    if runat == 'lambda':
+    	r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment))
+    else:
+        r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment))
+
 
     # [END submitted]
     # [START render_template]
