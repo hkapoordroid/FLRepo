@@ -24,12 +24,12 @@ def submitted_form():
     company = request.form['company']
     investment = request.form['investment']
     runat = request.form['runat']
+    rtype = request.form['rtype']
 
     if runat == 'lambda':
-    	r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment))
+    	r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment)+'&rtype='+str(rtype))
     else:
-        r = urllib2.urlopen('http://ec2-35-177-240-17.eu-west-2.compute.amazonaws.com/?company='+str(company)+'&investment='+str(investment))
-
+        r = urllib2.urlopen('http://ec2-35-176-60-162.eu-west-2.compute.amazonaws.com/?company='+str(company)+'&investment='+str(investment)+'&rtype='+str(rtype))
 
     # [END submitted]
     # [START render_template]
