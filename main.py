@@ -28,7 +28,7 @@ def submitted_form():
     if runat == 'lambda':
     	r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment))
     else:
-        r = urllib2.urlopen('http://6pi4zde07i.execute-api.eu-west-2.amazonaws.com/Prod?company='+str(company)+'&investment='+str(investment))
+        r = urllib2.urlopen('http://ec2-35-177-240-17.eu-west-2.compute.amazonaws.com/?company='+str(company)+'&investment='+str(investment))
 
 
     # [END submitted]
