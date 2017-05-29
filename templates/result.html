@@ -57,6 +57,56 @@
           <input type="submit">
         </form>
       </div>
+      <div id="result">
+       <p>
+           <table style="width:100%,align:center">
+                   <tr>
+			<th bgcolor="#FF0000">
+				Method
+			</th>
+			<th bgcolor="#FF0000">
+				95% Confidence
+			</th>
+			<th bgcolor="#FF0000">
+				99% Confidence
+			</th>
+                   </tr>
+		   <tr>
+                        <th>
+                                Historic
+                        </th>
+                        <th>
+                                {{historic95}}
+                        </th>
+                        <th>
+                                {{historic99}}
+                        </th>
+                   </tr>
+		   <tr>
+                        <th>
+                                Covariance
+                        </th>
+                        <th>
+                                {{covariance95}}
+                        </th>
+                        <th>
+                                {{covariance99}}
+                        </th>
+                   </tr>
+		   <tr>
+                        <th>
+                                Monte Carlo
+                        </th>
+                        <th>
+                                {{montecarlo95}}
+                        </th>
+                        <th>
+                                {{montecarlo99}}
+                        </th>
+                   </tr>
+           </table>
+       </p>
+     </div>
     </div>
   </body>
 </html>
